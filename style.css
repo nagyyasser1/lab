@@ -59,8 +59,14 @@ nav {
   position: relative;
 }
 
-.logo i {
-  font-size: 30px;
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logoContainer img {
+  margin-right: 10px;
+  cursor: pointer;
 }
 
 nav ul {
@@ -98,6 +104,49 @@ nav ul li a:hover {
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
+/* ======== MAIN ============ */
+
+main {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgb(0, 0, 0, 0.4), black),
+    url('./images/150314051846-egypt-new-capital-full-169.jpg');
+  background-size: cover;
+  object-fit: contain;
+  background-attachment: fixed;
+  color: white;
+  position: relative;
+}
+
+main .contentWrapper {
+  color: white;
+  height: 100vh;
+  width: 40%;
+  background-color: rgb(96, 10, 255);
+  opacity: 0.4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.content {
+  position: absolute;
+  top: 60%;
+  width: 40%;
+}
+.content div {
+  width: 70%;
+  margin: auto;
+}
+
+/* ======== practiceSection ===========*/
+
+.practiceSection {
+  min-height: 100vh;
+  background-color: gainsboro;
+}
+
 @media only screen and (max-width: 900px) {
   nav ul {
     display: none;
@@ -108,33 +157,26 @@ nav ul li a:hover {
   .sideNav {
     transition: 1s;
   }
+  /* .contentWrapper {
+    display: none !important;
+  }
+  .content {
+    display: none;
+  } */
+  main {
+    display: flex;
+    justify-content: center;
+  }
+  main .contentWrapper {
+    opacity: 0.1;
+  }
+  main .content {
+    top: 50%;
+  }
 }
 
 @media only screen and (min-width: 900px) {
   .sideNav {
     display: none;
   }
-}
-
-/* ======== MAIN ============ */
-
-main {
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(rgb(0, 0, 0, 0.5), black),
-    url('./images/150314051846-egypt-new-capital-full-169.jpg');
-  background-size: cover;
-  object-fit: contain;
-  background-attachment: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-}
-
-/* ======== practiceSection ===========*/
-
-.practiceSection {
-  min-height: 100vh;
-  background-color: gainsboro;
 }
